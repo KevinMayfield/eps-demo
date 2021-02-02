@@ -1,0 +1,36 @@
+<mat-menu #menu="matMenu">
+    <button mat-menu-item routerLink="/order"><mat-icon>shopping_basket</mat-icon>My Tasks</button>
+    <button mat-menu-item routerLink="/search"><mat-icon>add_shopping_cart</mat-icon>Add Tasks</button>
+    <button mat-menu-item routerLink="/refill"><mat-icon>reorder</mat-icon>Reorder Medications</button>
+</mat-menu>
+<td-layout class="layout-nav-demo" sidenavWidth="280px">
+    <td-navigation-drawer
+            flex
+            sidenavTitle="Menu" >
+        <mat-list>
+        </mat-list>
+        <span>
+    </span>
+    </td-navigation-drawer>
+    <td-layout-nav-list navigationRoute="/" opened="false" mode="side">
+
+        <div td-sidenav-content>
+
+
+        </div>
+        <div td-toolbar-content layout="row" layout-align="start center" flex>
+
+           <!-- <button mat-icon-button td-menu-button tdLayoutToggle>
+                <mat-icon>menu</mat-icon>
+            </button>
+-->
+            <span>EPS Mock</span>
+            <span flex></span>
+
+
+            <button mat-icon-button [matMenuTriggerFor]="menu" matTooltip="Exercie"><mat-icon>shopping_cart</mat-icon><mat-icon>arrow_drop_down</mat-icon></button>
+
+        </div>
+        <router-outlet></router-outlet>
+    </td-layout-nav-list>
+</td-layout>
