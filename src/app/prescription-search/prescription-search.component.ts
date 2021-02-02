@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MatTableDataSource} from "@angular/material/table";
 
 @Component({
   selector: 'app-prescription-search',
@@ -20,9 +21,32 @@ export class PrescriptionSearchComponent implements OnInit {
    
    It would make sense to be able to be able to **accept** the task. This accept is equivalent to **PatientPrescriptionReleaseRequest**
  `;
-  constructor() { }
+
+    displayedColumns: string[] = ['status','pharmacy','first_name', 'last_name', 'nhs_number', 'order_number',  'accept_order', 'view_order'];
+
+    dataSource;
+    data: any[] =  [
+        {
+            'first_name' : 'Nick',
+            'last_name' : 'Fury',
+            'nhs_number' : '9876543210',
+            'order_number': '7654321-ABCDFE-12345',
+            'pharmacy' : 'VNE51',
+            'status' : 'accepted'
+        },
+        {
+            'first_name' : 'Wanda',
+            'last_name' : 'Maximoff',
+            'nhs_number' : '9765483210',
+            'order_number': '5437621-ABCDFE-543125',
+            'status' : 'requested'
+        }
+    ]
+
+    constructor() { }
 
   ngOnInit(): void {
+      this.dataSource = new MatTableDataSource <any>(this.data);
   }
 
 }

@@ -27,6 +27,9 @@ import { PrescriptionOrderDetailComponent } from './prescription-order-detail/pr
 import {MatCardModule} from "@angular/material/card";
 import {CovalentDataTableModule} from "@covalent/core/data-table";
 import {MatTableModule} from "@angular/material/table";
+import {CovalentSearchModule} from "@covalent/core/search";
+import {MatTooltipModule} from "@angular/material/tooltip";
+import {CovalentMessageModule} from "@covalent/core/message";
 
 @NgModule({
   declarations: [
@@ -54,6 +57,8 @@ import {MatTableModule} from "@angular/material/table";
     CovalentExpansionPanelModule,
     CovalentLoadingModule,
     CovalentNotificationsModule,
+    CovalentSearchModule,
+    CovalentMessageModule,
 
     MatIconModule,
     MatButtonModule,
@@ -62,6 +67,7 @@ import {MatTableModule} from "@angular/material/table";
     MatCardModule,
     CovalentDataTableModule,
     MatTableModule,
+    MatTooltipModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
