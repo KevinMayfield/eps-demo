@@ -16,7 +16,7 @@ export class PrescriptionSearchComponent implements OnInit {
    
    The searches would be on prescription token and NHS Number
    
-   - **GET /Task?for={NHSNumber}**
+   - **GET /Task?for.identifier={NHSNumber}**
    - **GET /Task?group-identifier={prescription-short-form-id}**
    
    It would make sense to be able to be able to **accept** the task. This accept is equivalent to **PatientPrescriptionReleaseRequest**

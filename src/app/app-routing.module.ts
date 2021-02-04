@@ -5,6 +5,8 @@ import {PrescriptionOrdersComponent} from "./prescription-orders/prescription-or
 import {PrescriptionRefillComponent} from "./prescription-refill/prescription-refill.component";
 import {PrescriptionSearchComponent} from "./prescription-search/prescription-search.component";
 import {PrescriptionOrderDetailComponent} from "./prescription-order-detail/prescription-order-detail.component";
+import {PharmacyComponent} from "./pharmacy/pharmacy.component";
+import {PatientComponent} from "./patient/patient.component";
 
 const routes: Routes = [
   {
@@ -24,6 +26,12 @@ const routes: Routes = [
       },
       {
         path: 'search', component: PrescriptionSearchComponent
+      },
+      {
+        path: 'pharmacy', component: PharmacyComponent
+      },
+      {
+        path: 'patient', component: PatientComponent
       }
     ]
   }

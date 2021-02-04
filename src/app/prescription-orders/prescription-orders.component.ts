@@ -18,6 +18,8 @@ export class PrescriptionOrdersComponent implements OnInit {
    As FHIR this would be 
    
    - **GET /Task?owner={ODSCode}**
+   - **GET /Task?for.identifier={NHSNumber}**
+   - **GET /Task?group-identifier={prescriptionShortFormId}**
    
    It would make sense to be able to view the detailed prescriptions and also perform actions on them. Suggested action would be to return the Task (aka Prescription) to EPS (**DispenseProposalReturn**).
    

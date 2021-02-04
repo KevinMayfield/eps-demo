@@ -30,6 +30,9 @@ import {MatTableModule} from "@angular/material/table";
 import {CovalentSearchModule} from "@covalent/core/search";
 import {MatTooltipModule} from "@angular/material/tooltip";
 import {CovalentMessageModule} from "@covalent/core/message";
+import { PatientComponent } from './patient/patient.component';
+import { PharmacyComponent } from './pharmacy/pharmacy.component';
+import {MatChipsModule} from "@angular/material/chips";
 
 @NgModule({
   declarations: [
@@ -38,7 +41,9 @@ import {CovalentMessageModule} from "@covalent/core/message";
     PrescriptionOrdersComponent,
     PrescriptionRefillComponent,
     PrescriptionSearchComponent,
-    PrescriptionOrderDetailComponent
+    PrescriptionOrderDetailComponent,
+    PatientComponent,
+    PharmacyComponent
   ],
   imports: [
     BrowserModule,
@@ -68,6 +73,7 @@ import {CovalentMessageModule} from "@covalent/core/message";
     CovalentDataTableModule,
     MatTableModule,
     MatTooltipModule,
+    MatChipsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
